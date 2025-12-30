@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeminiProDZ - Offre Étudiante</title>
+    <!-- Tailwind CSS (Via CDN pour marcher sans installation) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 950: '#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animation pour le fond */
+        .glow {
+            background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, rgba(0,0,0,0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans selection:bg-blue-500 selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold">
+                    <!-- Icone Éclair simple -->
+                    ⚡
+                </div>
+                <span class="text-xl font-bold text-white">
+                    GeminiPro<span class="text-blue-500">DZ</span>
+                </span>
+            </div>
+            <a href="#order-section" class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-sm hover:bg-slate-200 transition">
+                Commander
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-32 pb-16 px-4 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] glow -z-10"></div>
+
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800 text-blue-300 text-xs font-bold uppercase tracking-wide mb-6">
+            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+            Nouvelle Version
+        </div>
+
+        <h1 class="text-5xl font-extrabold text-white mb-6 leading-tight">
+            L'IA Puissante. <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Prix Étudiant.
+            </span>
+        </h1>
+
+        <p class="text-lg text-slate-400 max-w-xl mx-auto mb-8">
+            Accédez à Gemini 1.5 Pro. Idéal pour rédiger tes mémoires, coder tes projets et analyser tes cours.
+        </p>
+
+        <div class="flex flex-col gap-3 max-w-xs mx-auto">
+            <button onclick="selectPlan('student')" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-500/20 transition transform active:scale-95">
+                🎓 Offre Étudiant (1000 DA)
+            </button>
+            <button onclick="selectPlan('standard')" class="bg-slate-800 border border-slate-700 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-700 transition">
+                💼 Standard (1700 DA)
+            </button>
+        </div>
+    </header>
+
+    <!-- AVANTAGES RAPIDES -->
+    <section class="py-12 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 grid gap-6 md:grid-cols-3 text-center">
+            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800">
+                <div class="text-3xl mb-2">🚀</div>
+                <h3 class="font-bold text-white">Performance</h3>
+                <p class="text-sm text-slate-400">Modèle 1.5 Pro ultra rapide</p>
+            </div>
+            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800">
+                <div class="text-3xl mb-2">🔒</div>
+                <h3 class="font-bold text-white">Privé</h3>
+                <p class="text-sm text-slate-400">Compte personnel sécurisé</p>
+            </div>
+            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800">
+                <div class="text-3xl mb-2">🇩🇿</div>
+                <h3 class="font-bold text-white">Local</h3>
+                <p class="text-sm text-slate-400">Paiement CCP / BaridiMob</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULAIRE DE COMMANDE -->
+    <section id="order-section" class="py-16 px-4">
+        <div class="max-w-lg mx-auto bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-2xl">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-white">Finaliser la commande</h2>
+                <p class="text-slate-400 text-sm mt-1">Redirection vers WhatsApp pour valider</p>
+            </div>
+
+            <!-- Sélecteur visuel -->
+            <div class="flex bg-slate-950 p-1 rounded-lg mb-6 border border-slate-800">
+                <button id="btn-standard" onclick="setPlan('standard')" class="flex-1 py-2 rounded-md text-sm font-medium text-slate-400 transition">Standard</button>
+                <button id="btn-student" onclick="setPlan('student')" class="flex-1 py-2 rounded-md text-sm font-medium bg-blue-600 text-white shadow transition">Étudiant</button>
+            </div>
+
+            <!-- Formulaire -->
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 mb-1 ml-1 uppercase">Nom Complet</label>
+                    <input type="text" id="name" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="Ex: Amine ...">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 mb-1 ml-1 uppercase">Téléphone</label>
+                    <input type="tel" id="phone" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="05 XX XX XX XX">
+                </div>
+
+                <!-- Message Carte Étudiant -->
+                <div id="student-msg" class="bg-blue-500/10 border border-blue-500/20 p-3 rounded-lg flex gap-3">
+                    <span class="text-xl">🎓</span>
+                    <p class="text-xs text-blue-200 mt-1">Préparez une photo de votre carte étudiante pour l'envoyer sur WhatsApp.</p>
+                </div>
+
+                <button onclick="sendToWhatsapp()" class="w-full bg-green-600 hover:bg-green-500 text-white py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition transform active:scale-95">
+                    <span>💬</span> Commander sur WhatsApp
+                </button>
+            </div>
+            
+            <p class="text-center text-xs text-slate-500 mt-4">
+                Paiement accepté : CCP, BaridiMob, Main à main.
+            </p>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 text-slate-600 text-xs">
+        &copy; 2025 GeminiProDZ.
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        let currentPlan = 'student'; // Par défaut
+
+        // Fonction pour changer de plan
+        function setPlan(plan) {
+            currentPlan = plan;
+            const btnStd = document.getElementById('btn-standard');
+            const btnStu = document.getElementById('btn-student');
+            const msg = document.getElementById('student-msg');
+
+            if (plan === 'student') {
+                btnStu.className = "flex-1 py-2 rounded-md text-sm font-medium bg-blue-600 text-white shadow transition";
+                btnStd.className = "flex-1 py-2 rounded-md text-sm font-medium text-slate-400 transition hover:text-white";
+                msg.style.display = 'flex';
+            } else {
+                btnStd.className = "flex-1 py-2 rounded-md text-sm font-medium bg-slate-700 text-white shadow transition";
+                btnStu.className = "flex-1 py-2 rounded-md text-sm font-medium text-slate-400 transition hover:text-white";
+                msg.style.display = 'none';
+            }
+        }
+
+        // Scroll et sélectionne
+        function selectPlan(plan) {
+            setPlan(plan);
+            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Envoi WhatsApp
+        function sendToWhatsapp() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            if (!name || !phone) {
+                alert("Merci de remplir votre nom et numéro !");
+                return;
+            }
+
+            const planName = currentPlan === 'student' ? 'ÉTUDIANT (1000 DA)' : 'STANDARD (1700 DA)';
+            const text = `Salam, je veux commander l'offre Gemini Pro ${planName}.%0A%0ANom: ${name}%0ATéléphone: ${phone}`;
+            
+            // TON NUMÉRO ICI
+            const myNumber = "213796377713"; 
+            
+            window.open(`https://wa.me/${myNumber}?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+
