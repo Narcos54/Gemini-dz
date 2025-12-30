@@ -426,131 +426,428 @@
 </body>
 </html>
 
-            Accédez à Gemini 1.5 Pro. Idéal pour rédiger tes mémoires, coder tes projets et analyser tes cours.
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini 3 - Comparatif Détaillé</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons (Icônes Pro) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Font Space Grotesk -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: { 850: '#0f172a', 950: '#020617' },
+                        brand: { 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb' },
+                        pro: { 400: '#c084fc', 500: '#a855f7' }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 3s linear infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #020617; }
+        
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-highlight {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(168, 85, 247, 0.15));
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #a855f7, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .comparison-row:nth-child(even) { background-color: rgba(255,255,255,0.02); }
+        
+        /* Scrollbar pour le tableau sur mobile */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="text-slate-200 antialiased overflow-x-hidden">
+
+    <!-- BACKGROUND -->
+    <div class="fixed inset-0 -z-10">
+        <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] animate-pulse-slow" style="animation-delay: 2s"></div>
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass border-b-0">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <i class="ph-fill ph-sparkle text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-white">Gemini<span class="text-blue-400">DZ</span></span>
+            </div>
+            <a href="#tarifs" class="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold text-sm hover:bg-blue-50 transition shadow-lg flex items-center gap-2 group">
+                Commander <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="pt-36 pb-20 px-4 text-center relative max-w-5xl mx-auto">
+        
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-blue-500/30 text-blue-300 text-xs font-bold uppercase tracking-widest mb-8 animate-float">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Gemini 3 Disponible
+        </div>
+
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight tracking-tight">
+            L'Intelligence Artificielle <br />
+            <span class="text-gradient">Sans Limites.</span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Profitez de la puissance de <strong>Gemini 3</strong>.
+            <br/><span class="text-white font-semibold">Vision Illimitée • Agent Autonome • 999 DA/an</span>
         </p>
 
-        <div class="flex flex-col gap-3 max-w-xs mx-auto">
-            <button onclick="selectPlan('student')" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-blue-500/20 transition transform active:scale-95">
-                🎓 Offre Étudiant (1000 DA)
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button onclick="scrollToSection('comparatif')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold text-lg border border-slate-700 transition">
+                Voir le Comparatif
             </button>
-            <button onclick="selectPlan('standard')" class="bg-slate-800 border border-slate-700 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-700 transition">
-                💼 Standard (1700 DA)
+            <button onclick="scrollToSection('tarifs')" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-purple-900/30 transition transform hover:-translate-y-1">
+                Obtenir pour 999 DA
             </button>
         </div>
     </header>
 
-    <!-- AVANTAGES RAPIDES -->
-    <section class="py-12 bg-slate-900/50 border-y border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 grid gap-6 md:grid-cols-3 text-center">
-            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800">
-                <div class="text-3xl mb-2">🚀</div>
-                <h3 class="font-bold text-white">Performance</h3>
-                <p class="text-sm text-slate-400">Modèle 1.5 Pro ultra rapide</p>
+    <!-- COMPARATIF TECHNIQUE DÉTAILLÉ -->
+    <section id="comparatif" class="py-24 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Comparaison Technique</h2>
+                <p class="text-slate-400">Détails techniques : Standard vs Gemini 3 Pro</p>
             </div>
-            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800">
-                <div class="text-3xl mb-2">🔒</div>
-                <h3 class="font-bold text-white">Privé</h3>
-                <p class="text-sm text-slate-400">Compte personnel sécurisé</p>
-            </div>
-            <div class="p-4 bg-slate-950 rounded-xl border border-slate-800">
-                <div class="text-3xl mb-2">🇩🇿</div>
-                <h3 class="font-bold text-white">Local</h3>
-                <p class="text-sm text-slate-400">Paiement CCP / BaridiMob</p>
+
+            <!-- TABLEAU DESKTOP & TABLETTE -->
+            <div class="overflow-x-auto rounded-3xl glass border border-slate-700 shadow-2xl">
+                <table class="w-full text-left border-collapse min-w-[700px]">
+                    <thead>
+                        <tr class="bg-slate-950/90 text-white border-b border-slate-700">
+                            <th class="p-6 text-xs font-bold text-slate-500 uppercase tracking-widest w-[30%]">Fonctionnalité</th>
+                            <th class="p-6 text-lg font-bold w-[30%] text-slate-400">Standard (Gratuit)</th>
+                            <th class="p-6 text-xl font-bold w-[40%] text-white bg-blue-900/20 border-l border-slate-700 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-gradient-to-r from-blue-600 to-purple-600 text-[10px] px-3 py-1 font-bold uppercase shadow-lg">Votre Offre</div>
+                                <span class="text-gradient">Gemini 3 Pro</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-300 text-sm md:text-base">
+                        
+                        <!-- SECTION INTELLIGENCE -->
+                        <tr class="bg-slate-900/50">
+                            <td colspan="3" class="px-6 py-3 text-xs font-bold text-blue-400 uppercase tracking-wider">Intelligence & Mémoire</td>
+                        </tr>
+                        <tr class="comparison-row border-b border-slate-800/50">
+                            <td class="p-6">
+                                <div class="font-bold text-white">Modèle d'IA</div>
+                                <div class="text-xs text-slate-500">Capacité cognitive</div>
+                            </td>
+                            <td class="p-6 text-slate-500">Flash 1.5 (Modèle léger)</td>
+                            <td class="p-6 font-bold text-white bg-blue-900/10 border-l border-slate-700">
+                                🧠 Gemini 3 (Raisonnement Profond)
+                            </td>
+                        </tr>
+                        <tr class="comparison-row border-b border-slate-800/50">
+                            <td class="p-6">
+                                <div class="font-bold text-white">Fenêtre de Contexte</div>
+                                <div class="text-xs text-slate-500">Mémoire active (PDFs, Code)</div>
+                            </td>
+                            <td class="p-6 text-slate-500">32k Tokens (Oublie vite)</td>
+                            <td class="p-6 font-bold text-green-400 bg-blue-900/10 border-l border-slate-700">
+                                📚 2 Millions Tokens (Mémoire Infinie)
+                            </td>
+                        </tr>
+
+                        <!-- SECTION VISION & MEDIA -->
+                        <tr class="bg-slate-900/50">
+                            <td colspan="3" class="px-6 py-3 text-xs font-bold text-blue-400 uppercase tracking-wider">Vision & Multimodal</td>
+                        </tr>
+                        <tr class="comparison-row border-b border-slate-800/50">
+                            <td class="p-6">
+                                <div class="font-bold text-white">Analyse Vidéo/Audio</div>
+                                <div class="text-xs text-slate-500">Compréhension native</div>
+                            </td>
+                            <td class="p-6 text-red-400"><i class="ph-bold ph-x-circle"></i> Impossible</td>
+                            <td class="p-6 font-bold text-white bg-blue-900/10 border-l border-slate-700">
+                                🎥 Regarde & Écoute (Natif)
+                            </td>
+                        </tr>
+                        <tr class="comparison-row border-b border-slate-800/50">
+                            <td class="p-6">
+                                <div class="font-bold text-white">Génération d'Images</div>
+                                <div class="text-xs text-slate-500">Qualité visuelle</div>
+                            </td>
+                            <td class="p-6 text-slate-500">Standard (Imagen 2)</td>
+                            <td class="p-6 font-bold text-white bg-blue-900/10 border-l border-slate-700">
+                                🎨 Imagen 3 (Photoréaliste HD)
+                            </td>
+                        </tr>
+
+                        <!-- SECTION CODE & AGENT -->
+                        <tr class="bg-slate-900/50">
+                            <td colspan="3" class="px-6 py-3 text-xs font-bold text-blue-400 uppercase tracking-wider">Capacités Techniques</td>
+                        </tr>
+                        <tr class="comparison-row border-b border-slate-800/50">
+                            <td class="p-6">
+                                <div class="font-bold text-white">Exécution de Code</div>
+                                <div class="text-xs text-slate-500">Python Sandbox</div>
+                            </td>
+                            <td class="p-6 text-slate-500">Assistant Basique</td>
+                            <td class="p-6 font-bold text-white bg-blue-900/10 border-l border-slate-700">
+                                💻 Agent Autonome (Exécute & Corrige)
+                            </td>
+                        </tr>
+                        
+                        <!-- SECTION PRIVACY -->
+                        <tr class="comparison-row border-b border-slate-800/50">
+                            <td class="p-6">
+                                <div class="font-bold text-white">Confidentialité</div>
+                                <div class="text-xs text-slate-500">Usage de vos données</div>
+                            </td>
+                            <td class="p-6 text-red-400 text-sm">⚠️ Utilisé pour l'entrainement</td>
+                            <td class="p-6 font-bold text-blue-400 bg-blue-900/10 border-l border-slate-700 flex items-center gap-2">
+                                <i class="ph-fill ph-shield-check"></i> Mode Privé (Zéro Training)
+                            </td>
+                        </tr>
+
+                        <!-- SECTION PRIX -->
+                        <tr class="comparison-row">
+                            <td class="p-6">
+                                <div class="font-bold text-white">Tarif Annuel</div>
+                            </td>
+                            <td class="p-6 text-slate-500">Gratuit</td>
+                            <td class="p-6 font-bold text-blue-400 bg-blue-900/10 border-l border-slate-700 text-xl">
+                                999 DA <span class="text-xs text-slate-400 font-normal">/an</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-    <!-- FORMULAIRE DE COMMANDE -->
-    <section id="order-section" class="py-16 px-4">
-        <div class="max-w-lg mx-auto bg-slate-900 p-6 rounded-2xl border border-slate-800 shadow-2xl">
-            <div class="text-center mb-6">
-                <h2 class="text-2xl font-bold text-white">Finaliser la commande</h2>
-                <p class="text-slate-400 text-sm mt-1">Redirection vers WhatsApp pour valider</p>
-            </div>
-
-            <!-- Sélecteur visuel -->
-            <div class="flex bg-slate-950 p-1 rounded-lg mb-6 border border-slate-800">
-                <button id="btn-standard" onclick="setPlan('standard')" class="flex-1 py-2 rounded-md text-sm font-medium text-slate-400 transition">Standard</button>
-                <button id="btn-student" onclick="setPlan('student')" class="flex-1 py-2 rounded-md text-sm font-medium bg-blue-600 text-white shadow transition">Étudiant</button>
-            </div>
-
-            <!-- Formulaire -->
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold text-slate-400 mb-1 ml-1 uppercase">Nom Complet</label>
-                    <input type="text" id="name" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="Ex: Amine ...">
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold text-slate-400 mb-1 ml-1 uppercase">Téléphone</label>
-                    <input type="tel" id="phone" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition" placeholder="05 XX XX XX XX">
-                </div>
-
-                <!-- Message Carte Étudiant -->
-                <div id="student-msg" class="bg-blue-500/10 border border-blue-500/20 p-3 rounded-lg flex gap-3">
-                    <span class="text-xl">🎓</span>
-                    <p class="text-xs text-blue-200 mt-1">Préparez une photo de votre carte étudiante pour l'envoyer sur WhatsApp.</p>
-                </div>
-
-                <button onclick="sendToWhatsapp()" class="w-full bg-green-600 hover:bg-green-500 text-white py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition transform active:scale-95">
-                    <span>💬</span> Commander sur WhatsApp
-                </button>
-            </div>
+    <!-- TARIFS -->
+    <section id="tarifs" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Offres de Lancement - 12 Mois</h2>
             
-            <p class="text-center text-xs text-slate-500 mt-4">
-                Paiement accepté : CCP, BaridiMob, Main à main.
-            </p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Offre Standard -->
+                <div onclick="selectPlan('standard')" class="glass rounded-3xl p-8 hover:border-slate-500 transition cursor-pointer group relative opacity-80 hover:opacity-100">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Standard</h3>
+                            <p class="text-sm text-slate-400 mt-1">Pour les professionnels</p>
+                        </div>
+                        <div class="bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded-lg text-xs font-bold">1 AN</div>
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold text-white">1700 DA</span>
+                        <span class="text-slate-500">/an</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 text-sm text-slate-400">
+                        <li class="flex items-center gap-3"><i class="ph-bold ph-check text-blue-500"></i> Accès Gemini 3</li>
+                        <li class="flex items-center gap-3"><i class="ph-bold ph-check text-blue-500"></i> Support standard</li>
+                        <li class="flex items-center gap-3"><i class="ph-bold ph-check text-blue-500"></i> 12 Mois garantis</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl border border-slate-600 text-white font-semibold hover:bg-slate-800 transition">
+                        Choisir Standard
+                    </button>
+                </div>
+
+                <!-- Offre Étudiant (999 DA) -->
+                <div onclick="selectPlan('student')" class="rounded-3xl p-1 bg-gradient-to-b from-blue-500 to-purple-600 relative transform md:-translate-y-6 shadow-2xl shadow-purple-500/20 cursor-pointer group hover:scale-[1.02] transition duration-300">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-slate-900 border border-blue-500 text-blue-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-lg">
+                        <i class="ph-fill ph-fire"></i> Offre Choc
+                    </div>
+                    
+                    <div class="bg-slate-900 rounded-[22px] p-8 h-full relative overflow-hidden">
+                        <!-- Effet de fond -->
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl"></div>
+
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white flex items-center gap-2">Étudiant <i class="ph-fill ph-student text-purple-400"></i></h3>
+                                <p class="text-sm text-slate-400 mt-1">Justificatif requis</p>
+                            </div>
+                            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-lg text-xs font-bold shadow-lg">PROMO</div>
+                        </div>
+
+                        <div class="mb-6 relative z-10">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">999 DA</span>
+                            </div>
+                            <div class="text-slate-500 line-through text-sm mt-1">Au lieu de 1700 DA</div>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 text-sm text-white relative z-10">
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-purple-400 text-lg"></i> <strong>Modèle Gemini 3</strong></li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-purple-400 text-lg"></i> Photos & Vision Illimitées</li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-purple-400 text-lg"></i> Mode Privé (Zéro Training)</li>
+                        </ul>
+
+                        <button class="w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold transition flex items-center justify-center gap-2 shadow-lg">
+                            Profiter de l'offre 999 DA <i class="ph-bold ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <footer class="text-center py-8 text-slate-600 text-xs">
-        &copy; 2025 GeminiProDZ.
+    <!-- FORMULAIRE (Sticky) -->
+    <section id="commande" class="py-20 bg-slate-950 border-t border-slate-900 scroll-mt-20">
+        <div class="max-w-md mx-auto px-4">
+            <div class="glass-highlight p-8 rounded-3xl relative overflow-hidden">
+                
+                <div class="text-center mb-8">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 text-green-500 animate-pulse">
+                        <i class="ph-fill ph-whatsapp-logo text-4xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white">Commander sur WhatsApp</h2>
+                    <p class="text-slate-400 text-sm">Activation rapide de votre licence</p>
+                </div>
+
+                <div class="space-y-5">
+                    <!-- Toggle Plan -->
+                    <div class="grid grid-cols-2 bg-slate-900 p-1 rounded-xl border border-slate-700">
+                        <button id="btn-standard" onclick="setPlan('standard')" class="py-2.5 rounded-lg text-sm font-semibold text-slate-400 transition">Standard</button>
+                        <button id="btn-student" onclick="setPlan('student')" class="py-2.5 rounded-lg text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow transition">Étudiant (999 DA)</button>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold text-slate-500 uppercase ml-2">Nom</label>
+                        <input type="text" id="name" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" placeholder="Votre nom...">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold text-slate-500 uppercase ml-2">Téléphone</label>
+                        <input type="tel" id="phone" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" placeholder="05 XX XX XX XX">
+                    </div>
+
+                    <!-- Dynamic Message -->
+                    <div id="student-msg" class="bg-blue-500/10 border border-blue-500/20 p-3 rounded-xl flex gap-3 text-sm">
+                        <i class="ph-fill ph-student text-blue-400 mt-0.5 text-lg"></i>
+                        <span class="text-blue-200">Préparez la photo de votre <strong>carte d'étudiant</strong>.</span>
+                    </div>
+
+                    <button onclick="sendToWhatsapp()" class="w-full bg-green-600 hover:bg-green-500 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-green-900/20 flex items-center justify-center gap-2 transition transform hover:-translate-y-1 active:scale-95 group">
+                        Envoyer ma commande <i class="ph-bold ph-paper-plane-right group-hover:translate-x-1 transition"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-12 text-slate-600 text-sm border-t border-slate-900">
+        <p>&copy; 2025 GeminiProDZ. Non affilié à Google LLC.</p>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- LOGIC -->
     <script>
-        let currentPlan = 'student'; // Par défaut
+        let currentPlan = 'student';
 
-        // Fonction pour changer de plan
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
         function setPlan(plan) {
             currentPlan = plan;
             const btnStd = document.getElementById('btn-standard');
             const btnStu = document.getElementById('btn-student');
             const msg = document.getElementById('student-msg');
 
+            const activeClass = "py-2.5 rounded-lg text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow transition";
+            const inactiveClass = "py-2.5 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition";
+
             if (plan === 'student') {
-                btnStu.className = "flex-1 py-2 rounded-md text-sm font-medium bg-blue-600 text-white shadow transition";
-                btnStd.className = "flex-1 py-2 rounded-md text-sm font-medium text-slate-400 transition hover:text-white";
+                btnStu.className = activeClass;
+                btnStd.className = inactiveClass;
                 msg.style.display = 'flex';
             } else {
-                btnStd.className = "flex-1 py-2 rounded-md text-sm font-medium bg-slate-700 text-white shadow transition";
-                btnStu.className = "flex-1 py-2 rounded-md text-sm font-medium text-slate-400 transition hover:text-white";
+                btnStd.className = "py-2.5 rounded-lg text-sm font-semibold bg-slate-700 text-white shadow transition";
+                btnStu.className = inactiveClass;
                 msg.style.display = 'none';
             }
         }
 
-        // Scroll et sélectionne
         function selectPlan(plan) {
             setPlan(plan);
-            document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' });
+            scrollToSection('commande');
         }
 
-        // Envoi WhatsApp
         function sendToWhatsapp() {
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
 
             if (!name || !phone) {
-                alert("Merci de remplir votre nom et numéro !");
+                const inputs = document.querySelectorAll('input');
+                inputs.forEach(input => {
+                    input.classList.add('border-red-500');
+                    setTimeout(() => input.classList.remove('border-red-500'), 2000);
+                });
                 return;
             }
 
-            const planName = currentPlan === 'student' ? 'ÉTUDIANT (1000 DA)' : 'STANDARD (1700 DA)';
-            const text = `Salam, je veux commander l'offre Gemini Pro ${planName}.%0A%0ANom: ${name}%0ATéléphone: ${phone}`;
+            const planDetails = currentPlan === 'student' 
+                ? '🎓 OFFRE ÉTUDIANT - GEMINI 3 (999 DA)' 
+                : '💼 OFFRE STANDARD - GEMINI 3 (1700 DA)';
+                
+            const text = `Salam, je veux commander :%0A👉 *${planDetails}*%0A%0A👤 Nom: ${name}%0A📱 Tél: ${phone}%0A%0A(Version 12 Mois)`;
             
-            // TON NUMÉRO ICI
             const myNumber = "213796377713"; 
-            
             window.open(`https://wa.me/${myNumber}?text=${text}`, '_blank');
         }
     </script>
